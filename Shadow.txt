@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-in">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"> -->
+    <script>
+        function txtShadow(){
+            document.getElementById("msg").innerHTML = "Shadow Effects".fontsize(document.getElementById("sizeChange").value);
+        }
+        function setShadow(){
+            document.getElementById("msg").style.textShadow = `${document.getElementById("hShadow").value}px ${document.getElementById("vShadow").value}px ${document.getElementById("blurShadow").value}px ${document.getElementById("colorShadow").value}`;
+        }
+        function hShadow(){
+            setShadow();
+        }
+        function vShadow(){
+            setShadow();
+        }
+        function blurShadow(){
+            setShadow();
+        }
+        function colorPicker(){
+            setShadow();
+        }
+
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Shadow Effects</legend>
+        <dl>
+            <dt>Text Size</dt>
+            <dd><input id="sizeChange" onchange="txtShadow()" type="range" value="5" min="1" max="10"></dd>
+            <dt>Horizontal Shadow</dt>
+            <dd><input id="hShadow" onchange="hShadow()" type="range" min="1" max="50" value="25"></dd>
+            <dt>Vertical Shadow</dt>
+            <dd><input id="vShadow" onchange="vShadow()" type="range" min="1" max="50" value="25"></dd>
+            <dt>Blur Effect</dt>
+            <dd><input id="blurShadow" onchange="blurShadow()" type="range" min="1" max="10" value="5"></dd>
+            <dt>Color</dt>
+            <dd><input id="colorShadow" onchange="colorPicker()" type="color"></dd>
+        </dl>
+    </fieldset>
+    <p align="center" id="msg" >Shadow Effects</p>
+</body>
+</html>
